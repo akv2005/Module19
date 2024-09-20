@@ -1,0 +1,32 @@
+>>> Buyer.objects.create(name ='Anton', balance = '125', age = '22')                                                                
+<Buyer: Anton>
+>>> Buyer.objects.create(name ='Adrey', balance = '120', age = '25') 
+<Buyer: Adrey>
+>>> Buyer.objects.create(name ='Vasya', balance = '100', age = '15') 
+<Buyer: Vasya>
+>>> Game.objects.create(title = 'Spectrum ZX', cost = '100.20', size = '10.22', description = 'made in USA', age_limited = '1')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Game' is not defined
+>>> from task1.models import Game                                                                                               
+>>> Game.objects.create(title = 'Spectrum ZX', cost = '100.20', size = '10.22', description = 'made in USA', age_limited = '1')
+<Game: Spectrum ZX>
+>>> Game.objects.create(title = 'Sega', cost = '150.20', size = '8.22', description = 'made in China', age_limited = '1')       
+<Game: Sega>
+>>> Game.objects.create(title = 'SexToy', cost = '350.20', size = '80.22', description = 'made in Germany', age_limited = '0') 
+<Game: SexToy>
+>>>
+>>> Buyer.objects.all()                                                                                                         
+<QuerySet [<Buyer: Anton>, <Buyer: Adrey>, <Buyer: Vasya>]>
+>>> Game.objects.all()  
+<QuerySet [<Game: Spectrum ZX>, <Game: Sega>, <Game: SexToy>]>
+>>>
+>>> fst_buyer, sec_buyer = Buyer.objects.filter(age__gt=18)
+>>> thrd_buyer = Buyer.objects.get(age__lt=18)
+>>> game = Game.objects.get(id=1)
+
+>>> game.buyer.add(fst_buyer, sec_buyer, thrd_buyer) 
+>>> game = Game.objects.get(id=2)                    
+>>> game.buyer.add(fst_buyer, sec_buyer, thrd_buyer)
+>>> game = Game.objects.get(id=3)                    
+>>> game.buyer.add(fst_buyer, sec_buyer) 
