@@ -8,10 +8,11 @@ class main(TemplateView):
     template_name = 'platform.html'
 
 def cart(request):
-    mydict = {'games': ["Atomic Heart", "Cyberpunk 2077", "ZX Spectrum 1982"]}
-    context = {
-        'mydict': mydict,
-    }
+    title = 'Ассортимент'
+    buy = 'Купить'
+    games = Game.objects.all()
+    back = 'Вернуться обратно'
+    context = {'title': title,  'games': games, 'back': back}
 
     return render(request, 'fourth_task/cart.html', context)
 

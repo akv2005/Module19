@@ -1,25 +1,33 @@
 {% extends "fourth_task/menu.html" %}
-{% block title %}
-    {{ block.super }} - Магазин
-{% endblock %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Shop</title>
+    </head>
+    <body>
+        {%block pagename%}
+        <h1>{{title}}</h1>
+        {%endblock%}
 
-{% block pagename %}
-    Игры
-{% endblock %}
+        {%block menu%}
+            {{block.super}}
+        {%endblock%}
+        {%block content%}
+            <ul>
+            {%for game in games%}
+                <li><p>{{game.title}} |
+                    {{game.description}}.
+                    Стоимость:{{game.cost}}
+                    < <button onclick="return confirm('Вы подтверждаете эту покупку?');" type="submit" name="product" value="{{ game }}">
+                          Купить
+                      </button>
+                </p></li>
 
-{% block content %}
-    {{ block.super }}
-    <ul>
-    {% for key, value in mydict.items %}
-        {% for i in value %}
-        <li><h3>
-            {{ i }}
-            <button onclick="return confirm('Вы подтверждаете эту покупку?');" type="submit" name="product" value="{{ i }}">
-                Купить
-            </button>
-        </h3></li>
-        {% endfor %}
-    {% endfor %}
-    <ul>
-{% endblock %}
 
+            {%endfor%}
+            </ul>
+            <button><a href="/">{{back}} </a></button>
+        {%endblock%}
+
+    </body>
+</html>
