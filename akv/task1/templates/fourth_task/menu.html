@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Магазин игр
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" type="text/css" href='{% static "style.css" %}'>
+</head>
+<body>
+    <header>
+            <div>
+                <h1>
+                    {% block pagename %}
+                        ГЛАВНАЯ СТРАНИЦА
+                    {% endblock %}
+                </h1>
+            </div>
+    </header>
+    <hr>
+    <nav>
+        {% block menu %}
+            <h2><a href="/">Главная</a></h2>
+            <h2><a href="/cart/">Магазин игр</a></h2>
+            <h2>
+                <a href="/games/">Корзина</a>
+            </h2>
+        {% endblock %}
+    </nav>
+    <nav>
+        {% block content %}
+            <hr>
+        {% endblock %}
+    </nav>
+    <hr>
+    <h2>
+        Наш магазин игр всегда рад Вам!
+    </h2>
+     Пишите нам на <a href="mailto:mail@gmail.com">почту</a>
+    <br>
+     Звоните нам на телефон +7 9140001234
+</body>
+</html>
