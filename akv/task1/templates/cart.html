@@ -1,0 +1,35 @@
+{% extends "menu.html" %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ShopGame</title>
+    </head>
+    <body>
+        {%block pagename%}
+        <h1>{{title}}</h1>
+        {%endblock%}
+
+        {%block menu%}
+            {{block.super}}
+                {% include 'paginator.html' %}
+        {%endblock%}
+        {%block content%}
+                <ul>
+                {% for game in page_obj %}
+                    <li><p>{{game.title}} |
+                        {{game.description}}.
+                        Стоимость:{{game.cost}}
+                        < <button onclick="return confirm('Вы подтверждаете эту покупку?');" type="submit" name="product" value="{{ game }}">
+                              Купить
+                        </button>
+                </p></li>
+                    {% endfor %}
+
+                </ul>
+
+
+        <button><a href="/">{{back}} </a></button>
+            {%endblock%}
+     {% include 'paginator.html' %}
+    </body>
+</html>

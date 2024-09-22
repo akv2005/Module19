@@ -1,0 +1,12 @@
+--- 21-09-2024 21:50:20
+--- db.sqlite3
+INSERT INTO task1_buyer (name, balance, age) VALUES ('Piter', 133.33 , 34 );
+
+--- 21-09-2024 21:50:54
+--- db.sqlite3
+INSERT INTO task1_buyer (name, balance, age) VALUES ('Sidor', 133.33 , 44 );
+
+--- 21-09-2024 21:56:33
+--- db.sqlite3
+INSERT INTO task1_game (title,cost,size,description,age_limited) VALUES ('chess', 25, 44, 'Made in India' , 1);
+
