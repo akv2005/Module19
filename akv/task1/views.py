@@ -5,7 +5,7 @@ from .forms import UserRegister
 from django.http import HttpResponse
 from .models import *
 
-cnt_choice = 3
+cnt_choice = 5
 class main(TemplateView):
     template_name = 'platform.html'
 
@@ -16,7 +16,8 @@ def cart(request):
         cnt = cnt_choice
     cnt_choice = cnt
     title = 'Ассортимент'
-    games = Game.objects.all()
+#    games = Game.objects.all()
+    games = Game.objects.order_by('cost')
     paginator = Paginator(games, cnt)
     page_num = request.GET.get('page')
     page_obj = paginator.get_page(page_num)
