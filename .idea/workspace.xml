@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3244b68c-e1da-4bba-91e1-64e757d5aaa6" name="Changes" comment="Домашнее задание по теме &quot;Модели баз данных в Django">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="3244b68c-e1da-4bba-91e1-64e757d5aaa6" name="Changes" comment="Домашнее задание по теме &quot;MVT. Вывод объектов в шаблоны&quot; .">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/akv/akv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/akv/akv/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/akv/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/akv/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akv/task1/templates/fifth_task/registration_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/akv/task1/templates/fourth_task/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/akv/task1/templates/fourth_task/games.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/akv/task1/templates/fourth_task/menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/akv/task1/templates/fourth_task/platform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/akv/task1/templates/second_task/class_template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/akv/task1/templates/second_task/func_template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/akv/task1/templates/third_task/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/akv/task1/templates/third_task/games.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/akv/task1/templates/third_task/platform.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/akv/task1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/akv/task1/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,29 +103,44 @@
       <option name="project" value="LOCAL" />
       <updated>1726758145542</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Домашнее задание по теме &quot;MVT. Вывод объектов в шаблоны&quot;.">
+      <option name="closed" value="true" />
+      <created>1726847884737</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726847884737</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Домашнее задание по теме &quot;MVT. Вывод объектов в шаблоны&quot; .">
+      <option name="closed" value="true" />
+      <created>1726848273853</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726848273853</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Домашнее задание по теме &quot;Модели баз данных в Django.&quot;" />
     <MESSAGE value="Домашнее задание по теме &quot;Модели баз данных в Django" />
-    <option name="LAST_COMMIT_MESSAGE" value="Домашнее задание по теме &quot;Модели баз данных в Django" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;akv/db.sqlite3" />
+    <MESSAGE value="Домашнее задание по теме &quot;MVT. Вывод объектов в шаблоны&quot;." />
+    <MESSAGE value="Домашнее задание по теме &quot;MVT. Вывод объектов в шаблоны&quot; ." />
+    <option name="LAST_COMMIT_MESSAGE" value="Домашнее задание по теме &quot;MVT. Вывод объектов в шаблоны&quot; ." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/akv/task1/views.py</url>
+          <line>1</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/akv/task1/views.py</url>
-          <line>25</line>
+          <line>35</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

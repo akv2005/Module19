@@ -1,19 +1,29 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from .forms import UserRegister
 from django.http import HttpResponse
 from .models import *
 
+cnt_choice = 3
 class main(TemplateView):
     template_name = 'platform.html'
 
 def cart(request):
-    mydict = {'games': ["Atomic Heart", "Cyberpunk 2077", "ZX Spectrum 1982"]}
-    context = {
-        'mydict': mydict,
-    }
+    global cnt_choice
+    cnt = request.GET.get('cnt', cnt_choice)
+    if int(cnt) == 0:
+        cnt = cnt_choice
+    cnt_choice = cnt
+    title = 'Ассортимент'
+    games = Game.objects.all()
+    paginator = Paginator(games, cnt)
+    page_num = request.GET.get('page')
+    page_obj = paginator.get_page(page_num)
+    back = 'Вернуться обратно'
+    context = {'title': title, 'games': games, 'back': back, 'page_obj': page_obj,}
 
-    return render(request, 'fourth_task/cart.html', context)
+    return render(request, 'cart.html', context)
 
 
 def games(request):
@@ -21,7 +31,7 @@ def games(request):
         'back': '/',
         'cart': '/cart'
     }
-    return render(request, template_name='fourth_task/games.html', context=context)
+    return render(request, template_name='games.html', context=context)
 
 
 def sign_up_by_html(request):
@@ -40,7 +50,6 @@ def sign_up_by_html(request):
         print(f'Age: {age}')
         if username not in users and password == repeate_password and int(age)>=18:
             Buyer.objects.create(name=username, balance=10, age=age)
-            print(users)
             return HttpResponse(f'Приветствуем {username}')
         elif username in users:
             i +=1
@@ -56,8 +65,7 @@ def sign_up_by_html(request):
             return HttpResponse(f'Регистрация разрешена с 18ти лет.', status=400, reason='insufficient age')
     context = {'info':info}
 
-    print(users,'!!!!!')
-    return render(request, 'fifth_task/registration_page.html', context)
+    return render(request, 'registration_page.html', context)
 
 
 def sign_up_by_django(request):
@@ -98,7 +106,7 @@ def sign_up_by_django(request):
 
         form = UserRegister()
         context = {'info': info, 'form': form}
-        return render(request, 'fifth_task/registration_page.html', context)
+        return render(request, 'registration_page.html', context)
 
 
 

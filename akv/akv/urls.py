@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 #    path('class/', class2.as_view()),
 #    path('func/', func2),
-    path('', TemplateView.as_view(template_name='fourth_task/menu.html')),
+    path('', TemplateView.as_view(template_name='menu.html')),
     path('cart/', cart),
     path('games/', games),
     path('django_sign_up/', sign_up_by_django),
